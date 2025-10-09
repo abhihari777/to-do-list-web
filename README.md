@@ -10,7 +10,6 @@ It allows users to add, mark as complete, and delete tasks — helping you stay 
 - ➕ Add new tasks easily  
 - ✅ Mark tasks as completed  
 - ❌ Delete unwanted tasks  
-- 💾 Saves your tasks locally (optional: if you used localStorage)  
 - 💡 Clean and minimal design  
 - ⚡ Fast and responsive UI  
 
