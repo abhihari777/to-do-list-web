@@ -19,4 +19,12 @@ It allows users to add, mark as complete, and delete tasks — helping you stay 
 
 - **HTML5** – Structure of the app  
 - **CSS3** – Styling and layout  
-- **JavaScript (ES6)** – Dynamic interactions and event handling 
+- **JavaScript (ES6)** – Dynamic interactions and event handling
+
+---
+## 🌐 Demo
+👉 [View Demo](https://abhihari777.github.io/Rock-Paper-Scissors/)
+
+---
+## 🧾 License
+- This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
