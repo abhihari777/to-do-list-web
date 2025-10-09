@@ -1,0 +1,283 @@
+@import url('https://fonts.cdnfonts.com/css/dungeon-depths');
+@import url('https://fonts.cdnfonts.com/css/vintage-glory');
+@import url('https://fonts.cdnfonts.com/css/opsi');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(images/matt-gross-9aCkSl6YcXg-unsplash.jpg);
+    height:100vh;
+    width:100vw;
+    background-size: contain;
+    overflow-x: hidden;
+}
+
+.main {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+h2, .your-task {
+    color:white;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.text{
+    color:transparent;
+    font-size:60px;
+    background: linear-gradient(var(--angle), #000000, #9929EA, #CC66DA, #FAEB92);
+    background-clip: text;
+    animation: spin 10s linear infinite;
+    font-family: 'Dungeon Depths', sans-serif;
+    margin-top: 50px;
+    
+}
+
+@keyframes spin {
+    0% {
+        --angle: 0deg;
+    }
+
+    100% {
+        --angle:360deg;
+    }
+}
+
+.add-text {
+    height: 40px;
+    width: 80vw;
+    border-radius: 25px;
+    padding-left:10px;
+    padding-right: 10px;
+    font-family: 'Opsi', sans-serif;
+    font-size: 15px;
+}
+
+.back {
+    height: 40px;
+    width: 80vw;
+    border-radius: 25px;
+    position: relative;
+}
+
+.back::after {
+    content: "";
+    height:40px;
+    width:80vw;
+    border-radius: 25px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    translate:-50% -50%;
+    z-index:-1;
+    padding:3px;
+    animation: spin 1s linear infinite;
+}
+
+
+.back.active::after {
+    background: conic-gradient(from var(--angle), red, blue, #ffff00, #808080,	#f984ef, #ffff66, #ff08e8);
+}
+
+
+.back::before {
+    content: "";
+    height:40px;
+    width:80vw;
+    border-radius: 25px;
+    position:absolute;
+    background: linear-gradient(45deg, #ffff00, #808080,#f984ef, #ffff66, #ff08e8);
+    top:50%;
+    left:50%;
+    translate:-50% -50%;
+    z-index:-1;
+    padding:3px;
+    opacity: 0;
+}
+
+
+.back.active::before {
+    filter:blur(1.5rem);
+    opacity:0.3;
+}
+
+.search-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+    margin-top: 40px;
+}
+
+.btn {
+    width: 200px;
+    height:30px;
+    border-radius:25px;
+    background-color: transparent;
+    color:white;
+    font-family: 'Vintage Glory', sans-serif;
+    font-size: 20px;
+}
+
+@keyframes upp {
+    from {
+        --angle:270deg;
+    }
+
+    to {
+        --angle:100deg;
+    }
+}
+
+.btn:hover {
+    background: conic-gradient( from var(--angle) at 0% 100%, transparent 23%,  #000000,#9b8a2556 , #cc66dab9,#9a29ea92);
+    animation: upp 2s ease forwards;
+    cursor: pointer;
+}
+
+.remove-box {
+    height:auto;
+    width:auto;
+    background-color: transparent;
+    color:rgb(138, 19, 19);
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.tick-box {
+    color:green;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.task-box {
+    display: flex;
+    justify-content: space-between;
+    margin:0 auto;
+    width:96%;
+    align-items: self-start;
+    padding:20px;
+    border-radius: 25px;
+    background-color: #3625433c;
+    animation: slide 0.5s linear forwards;
+}
+
+@keyframes slide {
+    from {
+        transform: translateY(25px);
+        opacity:0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity:1;
+    }
+    
+}
+
+.boxes {
+    display:flex;
+    gap:10px;
+}
+
+.your-task {
+    background-color: rgb(13, 10, 10);
+    height:auto;
+    width:90vw;
+    height:auto;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    border-radius: 25px;
+    margin-top: 50px;
+}
+
+.task {
+    font-family: 'Opsi', sans-serif;
+    width:94%;
+    font-size: 15px;
+    padding-right:20px;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+
+h2 {
+    margin-left:20px;
+    margin-top: 20px;
+    background: linear-gradient(var(--angle), #9929EA, #CC66DA, #FAEB92);
+    background-clip: text;
+    animation: spin 10s linear infinite;
+    font-family: 'Dungeon Depths', sans-serif;
+    color:transparent;
+}
+
+.vanish {
+    animation: vanish 1s linear forwards;
+    transition: .5s;
+}
+
+@keyframes vanish {
+    from {
+        opacity: 1;
+    }
+
+    to{
+        opacity:0;
+    }
+}
+
+
+@media (max-width: 1045px) {
+    .text {
+        font-size:50px;
+    }
+
+    h2{
+        font-size:24px;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .text {
+        font-size:40px;
+    }
+}
+
+@media (max-width: 709px) {
+    .text {
+        font-size:30px;
+    }
+
+     h2{
+        font-size:14px;
+    }
+}
+
+@media (max-width: 519px) {
+    .text {
+        font-size:20px;
+    }
+}
+
+@media (max-width: 353px) {
+    .text {
+        font-size:10px;
+    }
+     h2{
+        font-size:4px;
+    }
+}
