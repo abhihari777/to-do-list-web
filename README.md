@@ -23,7 +23,7 @@ It allows users to add, mark as complete, and delete tasks — helping you stay 
 
 ---
 ## 🌐 Demo
-👉 [View Demo]([https://abhihari777.github.io/Rock-Paper-Scissors/](https://abhihari777.github.io/to-do-list-web/))
+👉 [View Demo](https://abhihari777.github.io/to-do-list-web/)
 
 ---
 ## 🧾 License
