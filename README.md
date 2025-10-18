@@ -8,7 +8,8 @@ It allows users to add, mark as complete, and delete tasks — helping you stay 
 ## 🚀 Features
 
 - ➕ Add new tasks easily  
-- ✅ Mark tasks as completed  
+- ✅ Mark tasks as completed
+- 💾 Saves your tasks locally (local-storage supported)
 - ❌ Delete unwanted tasks  
 - 💡 Clean and minimal design  
 - ⚡ Fast and responsive UI  
