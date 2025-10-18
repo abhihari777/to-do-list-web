@@ -2,8 +2,8 @@ let searchBtn = document.querySelector(".back");
 
 const enableAnimation = () => {
   searchBtn.addEventListener("click", () => {
-    searchBtn.classList.add("active");
-    setTimeout(() => searchBtn.classList.remove("active"), 1000);
+    searchBtn.classList.add("activate");
+    setTimeout(() => searchBtn.classList.remove("activate"), 1000);
   });
 };
 
@@ -91,4 +91,5 @@ function addMessage(taskText, completed = false) {
 }
 
 document.addEventListener("DOMContentLoaded", loadTasks);
+
 
