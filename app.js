@@ -2,8 +2,8 @@ let searchBtn = document.querySelector(".back");
 
 const enableAnimation = () => {
   searchBtn.addEventListener("click", () => {
-    searchBtn.classList.add("activate");
-    setTimeout(() => searchBtn.classList.remove("activate"), 1000);
+    searchBtn.classList.add("active");
+    setTimeout(() => searchBtn.classList.remove("active"), 1000);
   });
 };
 
@@ -17,7 +17,7 @@ button.addEventListener("click", addMessage);
 input.addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
     button.classList.add("activate");
-    setTimeout(() => button.classList.remove("active"), 1000);
+    setTimeout(() => button.classList.remove("activate"), 1000);
     addMessage();
   }
 });
@@ -91,5 +91,6 @@ function addMessage(taskText, completed = false) {
 }
 
 document.addEventListener("DOMContentLoaded", loadTasks);
+
 
 
