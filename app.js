@@ -17,7 +17,7 @@ button.addEventListener("click", addMessage);
 input.addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
     button.classList.add("activate");
-    setTimeout(() => button.classList.remove("activate"),1000);
+    setTimeout(() => button.classList.remove("activate"), 1000);
     addMessage();
   }
 });
@@ -36,7 +36,6 @@ function loadTasks() {
   const saved = JSON.parse(localStorage.getItem("tasks")) || [];
   saved.forEach((task) => addMessage(task.text, task.completed));
 }
-
 
 function addMessage(taskText, completed = false) {
   const displaymessageincontainer = () => {
@@ -84,14 +83,11 @@ function addMessage(taskText, completed = false) {
       }, 1000);
     });
 
-    saveTasks();
+    saveTasks(); 
   };
 
   displaymessageincontainer();
 }
 
 document.addEventListener("DOMContentLoaded", loadTasks);
-
-
-
 
