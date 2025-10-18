@@ -17,7 +17,7 @@ button.addEventListener("click", addMessage);
 input.addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
     button.classList.add("activate");
-    setTimeout(() => button.classList.remove("activate"), 1000);
+    setTimeout(() => button.classList.remove("activate"),1000);
     addMessage();
   }
 });
@@ -91,6 +91,7 @@ function addMessage(taskText, completed = false) {
 }
 
 document.addEventListener("DOMContentLoaded", loadTasks);
+
 
 
 
