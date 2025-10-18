@@ -124,26 +124,29 @@ h2, .your-task {
     width: 200px;
     height:30px;
     border-radius:25px;
-    background-color: transparent;
+    background: conic-gradient( from var(--angle) at 0% 100%, transparent 23%, #000000,#9b8a2556, #cc66dab9,#9a29ea92);
     color:white;
     font-family: 'Vintage Glory', sans-serif;
     font-size: 20px;
-}
+    --angle:270deg;
+    transition: --angle 1s ease-out;
 
-@keyframes upp {
-    from {
-        --angle:270deg;
-    }
-
-    to {
-        --angle:100deg;
-    }
 }
 
 .btn:hover {
     background: conic-gradient( from var(--angle) at 0% 100%, transparent 23%,  #000000,#9b8a2556 , #cc66dab9,#9a29ea92);
-    animation: upp 2s ease forwards;
+    animation: upp 1s ease forwards;
     cursor: pointer;
+    --angle:100deg;
+    
+
+}
+
+.activate {
+    background: conic-gradient( from var(--angle) at 0% 100%, transparent 23%,  #000000,#9b8a2556 , #cc66dab9,#9a29ea92);
+    animation: upp 1s ease forwards;
+    cursor: pointer;
+    --angle:100deg;
 }
 
 .remove-box {
@@ -216,7 +219,7 @@ h2, .your-task {
 
 h2 {
     margin-left:20px;
-    margin-top: 20px;
+    margin-top: 5px;
     background: linear-gradient(var(--angle), #9929EA, #CC66DA, #FAEB92);
     background-clip: text;
     animation: spin 10s linear infinite;
@@ -227,6 +230,12 @@ h2 {
 .vanish {
     animation: vanish 1s linear forwards;
     transition: .5s;
+}
+
+.checked {
+    text-decoration: line-through;
+    color: gray;
+    opacity: 0.6;
 }
 
 @keyframes vanish {
