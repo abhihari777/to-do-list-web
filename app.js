@@ -13,7 +13,9 @@ let button = document.querySelector(".btn");
 let input = document.querySelector(".add-text");
 let maindiv = document.querySelector(".your-task");
 
-button.addEventListener("click", addMessage());
+button.addEventListener("click", () => {
+  addMessage();
+});
 input.addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
     button.classList.add("activate");
@@ -90,4 +92,5 @@ function addMessage(taskText, completed = false) {
 }
 
 document.addEventListener("DOMContentLoaded", loadTasks);
+
 
